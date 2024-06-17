@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        .pokeball {
+            width: 100px;
+            height: auto;
+            top: 100px;
+            position: absolute;
+        }
+        .container {
+            min-width: 90vh;
+            min-height: 85vh;
+            margin: 10px;
+            background-color: beige;
+            padding: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img id="pokeball" src="pokemon-battle-revolution-pokemon-go-voltorb-electrode-pokemon-go-.png" class="pokeball" onclick="teleport()">
+        
+    </div>
+    
+</body>
+<script>
+    const maxheight = window.innerHeight - 100;
+    const maxwidth = window.innerWidth - 100;
+    function teleport() {
+        const pokeball = document.getElementById("pokeball");
+        const randomtopposition = Math.floor(Math.random() * maxheight);
+        const randomleftposition = Math.floor(Math.random() * maxwidth);
+        pokeball.style.top = randomtopposition + 'px';
+        pokeball.style.left = randomleftposition + 'px';
+    }
+</script>
+</html>
